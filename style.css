@@ -38,6 +38,7 @@ header h2 i {
     font-style: italic;
     font-size: 16px;
 }
+
 .potential-cities button {
     display: block;
     margin-right: 10px; /* Add some margin to separate the buttons */
@@ -68,11 +69,10 @@ main {
     border: 2px solid black;
     padding: 20px; /* Optional: Add padding for spacing */
     border-radius: 10px;
-  }
-  
+}
 
-  aside {
-    display:    flex;
+aside {
+    display: flex;
     flex-direction: column;
 }
 
@@ -83,6 +83,7 @@ main {
     background-color: #f0f0f0;
     padding: 10px;
 }
+
 /* Style the forecast header and card today */
 .forecastheader {
     display: flex;
@@ -104,15 +105,12 @@ main {
     background-color: rgb(197, 220, 247);
 }
 
-
 .forecastcardforecast {
     display: block;
     flex-direction: row; /* Arrange cards vertically */
     max-height: 80vh; /* Limit height to take up a small portion of the screen */
     border: 2px solid black;
-    background-color: rgb(197, 220, 247); 
+    background-color: rgb(197, 220, 247);
     padding: 10px;
     margin: 5px;
 }
-
-

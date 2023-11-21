@@ -21,6 +21,7 @@ inputElement.addEventListener('input', function(event) {
   userInput = event.target.value.trim(); // Update userInput when the input field changes
 });
 
+// run the forecast
 function getApi(event) {
   forecastHeader.textContent = '5-Day Forecast: ' + userInput;
   forecastHeader.style.display = 'block';
@@ -51,17 +52,17 @@ function getApi(event) {
       
       saveCity(userInput); // Save city to local storage
       displaySavedCities(); // Update the displayed saved cities'
-      getCurrentWeather();
+      getCurrentWeather(); // start the next api request, but just for current day
     })
     .catch(function (error) {
       console.error('Error:', error);
       alert('You have entered the city name incorrectly. Please check your spelling');
     });
 }
-
+// create forecast cards for each of the next five days
 function createForecastCard(forecastData)  {
   var forecastCard = document.createElement('div');
-  forecastCard.className = 'forecast-card'; // Corrected the class name
+  forecastCard.className = 'forecast-card';
   forecastCard.style.display = 'block';
 
   var dateElement = document.createElement('p');
@@ -88,9 +89,10 @@ function createForecastCard(forecastData)  {
 
   forecastCards.appendChild(forecastCard);
 }
-
+// listen to if somebody clicks the submit button
 document.getElementById('submit-button').addEventListener('click', getApi);
 
+// creates a button for each city that is searched
 function CreateSavedButton(event) {
   var newButton = document.createElement('button');
   newButton.textContent = userInput;
@@ -101,7 +103,7 @@ function CreateSavedButton(event) {
 
 
 
-
+// gets the today's weather and populates it in the forecast header
 function getCurrentWeather(event) {
 
   var requesttodayUrl =

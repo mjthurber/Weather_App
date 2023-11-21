@@ -8,10 +8,12 @@
 </head>
 <body>
     <header>
+        <!-- The header section of the page -->
         <div class="left-image">
             <img src="images/earth-drawing-doodle-2.png" class="header-image" alt="Earth Image">
         </div>
         <div class="center-text">
+            <!-- The main title and subtitle of the app -->
             <h1>City Weather and Timezone App</h1>
             <h2>"Plan accordingly" <i>- Mom</i></h2>
             <h3> today is </h3>
@@ -23,22 +25,25 @@
     </header>
     <div class="content-wrapper">
         <main>
+            <!-- The main content section of the page -->
             <div class="search-bar user-search flex justify-center text-align flex-col container mx-auto">
+                <!-- The search bar and button for searching cities -->
                 <input type="text" placeholder="Paris, New York City, etc." id="input">
                 <button class="text-2xl bg-sky-300 py-6 mt-6" type='submit' id="submit-button">Search</button>
                 <div class="potential-cities">
+                    <!-- The section for displaying potential cities and a button to remove them -->
                     <button id="remove-button">Erase cities</button>
                     <div id="newCities"></div>
                 </div>
             </div>
         </main>
-
         <aside>
-                <div class="forecastheader">  </div>
-              
-                <div id="forecastcards" class="forecastcardforecast" ></div>
+            <!-- The sidebar section for displaying the weather forecast -->
+            <div class="forecastheader">  </div>
+            <div id="forecastcards" class="forecastcardforecast" ></div>
         </aside>
     </div>
+    <!-- The script tags for including external JavaScript libraries and the custom script.js file -->
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js" integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
