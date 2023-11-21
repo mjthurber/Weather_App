@@ -1,0 +1,118 @@
+/* Style for the header */
+header {
+    background-color: #3498db;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center-align vertically */
+    justify-content: space-between; /* Space evenly between elements */
+}
+
+/* Style for the left and right images */
+.header-image {
+    width: 80px;
+    height: auto;
+}
+
+/* Additional styles for the header text */
+.header-text {
+    text-align: center;
+    flex-grow: 1; /* Allow the text to take up available space */
+}
+
+/* Style the h1 element (Weather App title) */
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Style the h2 element (Quote) */
+header h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Style the italic text inside the h2 element */
+header h2 i {
+    font-style: italic;
+    font-size: 16px;
+}
+.potential-cities button {
+    display: block;
+    margin-right: 10px; /* Add some margin to separate the buttons */
+    margin-top: 25px;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr; /* First row for header, the rest for content */
+    height: 100vh; /* Ensure the layout covers the entire viewport height */
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Divide the content into thirds */
+    grid-gap: 20px; /* Optional gap between main and aside */
+}
+
+main {
+    grid-column: 1; /* Place main in the first column */
+}
+
+aside {
+    grid-column: 2; /* Place aside in the second column */
+}
+
+main {
+    border: 2px solid black;
+    padding: 20px; /* Optional: Add padding for spacing */
+    border-radius: 10px;
+  }
+  
+
+  aside {
+    display:    flex;
+    flex-direction: column;
+}
+
+#main-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+/* Style the forecast header and card today */
+.forecastheader {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 30vh;
+    background-color: #cdcaca;
+    padding: 10px;
+    border: 2px solid black;
+    position: relative; /* Ensure positioning context for absolute positioning */
+}
+
+.forecastcardtoday {
+    width: calc(33.33% - 10px); /* One-third of the header width minus margins */
+    height: 80px;
+    border: 2px solid black;
+    margin-left: auto; /* Push to the right by using auto margin */
+    margin-right: 5px; /* Add some space between the elements */
+    background-color: rgb(197, 220, 247);
+}
+
+
+.forecastcardforecast {
+    display: block;
+    flex-direction: row; /* Arrange cards vertically */
+    max-height: 80vh; /* Limit height to take up a small portion of the screen */
+    border: 2px solid black;
+    background-color: rgb(197, 220, 247); 
+    padding: 10px;
+    margin: 5px;
+}
+
+
